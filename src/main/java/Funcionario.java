@@ -1,5 +1,12 @@
 import java.util.Objects;
 
+/**
+ * Representa um funcionario do local
+ * <p>
+ *     Usada para demonostrar a modelagem de dados de um funcionario
+ *     para ser usado como um objeto de manipulação e armazenamento
+ * </p>
+ * */
 public class Funcionario {
     String cpf, nome;
     TipoFuncionario tipo;
