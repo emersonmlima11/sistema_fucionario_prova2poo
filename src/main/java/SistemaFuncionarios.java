@@ -9,5 +9,4 @@ public interface SistemaFuncionarios {
     public List<Funcionario> pesquisarFuncionariosPorTipo(TipoFuncionario tipo);
     public Funcionario pesquisarFuncionario(String cpfFuncionario);
     public List<Funcionario> pesquisarFuncionariosComSalarioMaiorQue(double valor);
-    }
 }
