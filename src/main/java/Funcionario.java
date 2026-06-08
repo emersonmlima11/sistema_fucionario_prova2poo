@@ -8,14 +8,28 @@ import java.util.Objects;
  * </p>
  * */
 public class Funcionario {
-    String cpf, nome;
-    TipoFuncionario tipo;
-    double salario;
+    /**
+     * Variáveis principais da classe
+     * cpf: chave primaria de identificação
+     * */
+    private String cpf, nome;
+    private TipoFuncionario tipo;
+    private double salario;
 
+    /**
+     * Construtor Genérico sem Params
+     * */
     Funcionario(){
         this("", "", null, 0.0);
     }
 
+    /**
+     * Construtor com sem Params
+     * @param cpf identificação do Funcionario
+     * @param nome nome completo do Funcionario
+     * @param salario valor que o Funcionario recebe
+     * @param tipo cargo que o Funcionario ocupa
+     * */
     Funcionario(String cpf, String nome, TipoFuncionario tipo, double salario){
         this.cpf = cpf;
         this.nome = nome;
@@ -55,6 +69,10 @@ public class Funcionario {
         this.salario = salario;
     }
 
+    /**
+     * Metodo que compara se um objeto é igual ao outro
+     * Comparação por meio do Cpf
+     * */
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -62,6 +80,9 @@ public class Funcionario {
         return Objects.equals(cpf, that.cpf);
     }
 
+    /**
+     * Metodo que gera um código unico para cada objeto
+     * */
     @Override
     public int hashCode() {
         return Objects.hashCode(cpf);

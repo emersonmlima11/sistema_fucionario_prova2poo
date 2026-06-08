@@ -24,10 +24,10 @@ public class SistemaFuncionariosBomPrato implements SistemaFuncionarios{
 
     @Override
     public void cadastrarFuncionario(Funcionario funcionario) throws FuncionarioJaExisteException{
-        if(funcionarioJaExiste(funcionario.cpf)){
-            throw new FuncionarioJaExisteException("Funcionario: "+funcionario.cpf+" já foi cadastrado!!");
+        if(funcionarioJaExiste(funcionario.getCpf())){
+            throw new FuncionarioJaExisteException("Funcionario: "+funcionario.getCpf()+" já foi cadastrado!!");
         }
-        this.funcionarios.put(funcionario.cpf, funcionario);
+        this.funcionarios.put(funcionario.getCpf(), funcionario);
     }
 
     @Override
